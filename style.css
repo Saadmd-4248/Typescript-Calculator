@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.phone-frame {
+  width: 300px;
+  height: 580px;
+  background: url('./pixelcut-export.png') no-repeat center;
+  background-size: 280px 560px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 230px;
+  height: 450px;
+  background: rgb(255, 255, 255);
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.display {
+  background: #ffffff;
+  padding: 15px;
+  text-align: right;
+  margin-top: 70px;
+}
+
+.display input {
+  border: none;
+  background: none;
+  width: 100%;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  text-align: right;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 12px;
+}
+.btn {
+  background: #bab8b8;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 1.2rem;
+  color: #333;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-weight: 500;
+}
+
+.btn.operator {
+  background: #64458e;
+  color: #fff;
+}
+.btn.equals {
+  background: #34bf22;
+  color: #fff;
+  grid-column: span 2;
+}
+.btn.zero {
+  grid-column: span 2;
+}
+.btn:hover {
+  background: #b78fea;
+}
+.btn:active {
+  background: #8235e7;
+  color: black;
+}
+.btn.operator:hover {
+  background: #986ed0;
+  color: black;
+}
+.btn.equals:hover {
+  background: #45a045;
+}
+@media (max-width: 370px) {
+  .phone-frame {
+    background-size: 260px 520px;
+  }
+  .calculator {
+    width: 220px;
+    height: 420px;
+  }
+  .btn {
+    padding: 5px;
+  }
+}
+@media (max-width: 320px) {
+   .phone-frame {
+    background-size: 235px 505px;
+  }
+  .calculator {
+    width: 200px;
+    height: 420px;
+  }
+  .btn {
+    padding: 5px;
+  }
+}
